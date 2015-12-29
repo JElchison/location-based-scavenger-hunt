@@ -85,7 +85,7 @@ Following is one recommended configuration:
     * Run latest version of TLS on obscure high port number (e.g. 55864)
     * [Strong Ciphers for Apache, nginx and Lighttpd](https://cipherli.st/)
     * Enable Python in CGI
-* [lighttpd](https://www.lighttpd.net/)
+* [lighttpd](https://www.lighttpd.net/) (see example config below)
     * `sudo apt-get install lighttpd`
     * [Setting up a simple SSL configuration](https://redmine.lighttpd.net/projects/1/wiki/HowToSimpleSSL)
     * [Strong SSL Security on lighttpd](https://raymii.org/s/tutorials/Strong_SSL_Security_On_lighttpd.html)
