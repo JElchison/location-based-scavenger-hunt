@@ -20,15 +20,15 @@ Techy stuff:
 
 ## Screenshots
 
-![Question](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Question.png)
-![Correct answer](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Correct.png)
-![Incorrect answer](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Incorrect.png)
-![Geocaching question](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Geocache.png)
-![Location question](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Location.png)
-![Hint example](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Hint.png)
-![Video hint](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Video.png)
-![Donate points](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Donate.png)
-![Admin panel](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Admin.png)
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Question.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Correct.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Incorrect.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Geocache.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Location.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Hint.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Video.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Donate.png" width="300">
+<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Admin.png" width="300">
 
 
 ## Setup
