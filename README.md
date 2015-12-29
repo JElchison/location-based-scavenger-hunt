@@ -20,29 +20,45 @@ Techy stuff:
 
 ## Screenshots
 
+<p>
 Sample question:
-<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Question.png" width="300">
+<br><img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Question.png" width="300">
+</p>
 
+<p>
 <br>A correct answer:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Correct.png" width="300">
+</p>
 
+<p>
 <br>An incorrect answer:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Incorrect.png" width="300">
+</p>
 
+<p>
 <br>A question linking to a geocache:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Geocache.png" width="300">
+</p>
 
+<p>
 <br>A location-based question:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Location.png" width="300">
+</p>
 
+<p>
 <br>A sample hint:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Hint.png" width="300">
+</p>
 
+<p>
 <br>Embedded HTML, in this case a YouTube video:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Video.png" width="300">
+</p>
 
+<p>
 <br>Admin panel:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Admin.png" width="300">
+</p>
 
 
 ## Setup
