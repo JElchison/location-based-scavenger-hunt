@@ -1,7 +1,7 @@
 # location-based-scavenger-hunt
 A Python/CGI framework for creating your own customizable location-based collaborative scavenger hunts.
 
-For Christmas 2015, I decided I'd like to gift my family an *experience* instead of a material item.  There are a few services out there that provide a similar service, but none (that I could find) are free or open-source.  So, I created my own.
+For Christmas 2015, I decided I'd like to gift my family an *experience* instead of material gifts.  There are a few services out there that provide location-based scavenger hunts, but none (that I could find) are free or open-source.  So, I created my own.  And now, this is my gift to you.
 
 Sample questions included are for a Christmas-based hunt in Cincinnati, but can easily be repurposed for your own uses (for any occasion, in any city).
 
@@ -20,14 +20,28 @@ Techy stuff:
 
 ## Screenshots
 
+Sample question:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Question.png" width="300">
+
+<br>A correct answer:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Correct.png" width="300">
+
+<br>An incorrect answer:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Incorrect.png" width="300">
+
+<br>A question linking to a geocache:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Geocache.png" width="300">
+
+<br>A location-based question:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Location.png" width="300">
+
+<br>A sample hint:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Hint.png" width="300">
+
+<br>Embedded HTML, in this case a YouTube video:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Video.png" width="300">
-<img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Donate.png" width="300">
+
+<br>Admin panel:
 <img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Admin.png" width="300">
 
 
