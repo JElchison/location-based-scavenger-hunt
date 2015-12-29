@@ -107,11 +107,11 @@ Following should be set up per-game:
     * Print a QR code for each user using the personalized login link
 
 For ideas on devising creative questions:
-    * Use the included Simon game
-    * Hide a clue inside a real [geocache](https://www.geocaching.com/), and then link to the geocache as part of a question
-    * Use [Google Voice](https://www.google.com/voice) for a custom voicemail greeting revealing a required clue
-    * Use [Twilio](https://www.twilio.com/) to do neat things with text messages
-    * Use [IFTTT](https://ifttt.com/) for some neat conditional clues
+* Use the included Simon game
+* Hide a clue inside a real [geocache](https://www.geocaching.com/), and then link to the geocache as part of a question
+* Use [Google Voice](https://www.google.com/voice) for a custom voicemail greeting revealing a required clue
+* Use [Twilio](https://www.twilio.com/) to do neat things with text messages
+* Use [IFTTT](https://ifttt.com/) for some neat conditional clues
     
 
 ### Client Setup
