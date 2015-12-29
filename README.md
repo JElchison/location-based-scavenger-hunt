@@ -102,7 +102,7 @@ Following should be set up per-game:
     * UTC time that game is expected to end
     * Define questions.  Refer to the [Question class](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game.py#L103) for more info. Sample questions included are for a Christmas-based hunt in Cincinnati, but can easily be repurposed for your own uses (for any occasion, in any city).
 * If using the (included) Simon question, be sure to update required end score and URL on [line 114 of `simon_says.js`](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/simon/inc/simon_says.js#L114).  The `q=14` *must* match the question number in `game_config.py`.
-* Set up a login method.  Login URL = `https://your-server-url.here:55864/cgi-bin/game.py?l=hash` where the hash comes from the `USERS` list in `game_config.py`. Methods:
+* Set up a login method.  Login URL = `https://your-server-url.here:55864/cgi-bin/game.py?l=hash` where `hash` comes from the `USERS` list in `game_config.py`. Methods:
     * Email a personalized login link to every user (no sharing login links).  This is the preferred method (see Client Setup below).
     * Print a QR code for each user using the personalized login link
 
@@ -161,7 +161,7 @@ An admin could use a browser on a phone, tablet, or even computer.  No need for 
 ## Resetting a Game
 
 To start a brand new game, or in case of catastrophic failure, admins have the ability to delete all persistent game state.  This can be done via the admin panel, or by accessing the following URL directly:
-* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where the hash comes from an admin in the `USERS` list in `game_config.py`.
+* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where `hash` comes from an admin in the `USERS` list in `game_config.py`.
 
 Non-admins cannot reset games.
 
