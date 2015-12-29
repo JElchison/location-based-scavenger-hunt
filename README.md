@@ -166,6 +166,62 @@ Non-admins cannot reset games.
 After a game reset, all players (including admins) must close all tabs and re-login.
 
 
+## Sample lighttpd config
+
+```
+server.modules = (
+        "mod_access",
+        "mod_alias",
+        "mod_compress",
+        "mod_redirect",
+#       "mod_rewrite",
+        "mod_cgi",
+)
+
+server.document-root        = "/var/www"
+server.upload-dirs          = ( "/var/cache/lighttpd/uploads" )
+server.errorlog             = "/var/log/lighttpd/error.log"
+server.pid-file             = "/var/run/lighttpd.pid"
+server.username             = "www-data"
+server.groupname            = "www-data"
+server.port                 = 80
+
+
+index-file.names            = ( "index.php", "index.html", "index.lighttpd.html" )
+url.access-deny             = ( "~", ".inc" )
+static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
+
+compress.cache-dir          = "/var/cache/lighttpd/compress/"
+compress.filetype           = ( "application/javascript", "text/css", "text/html", "text/plain" )
+
+# default listening port for IPv6 falls back to the IPv4 port
+## Use ipv6 if available
+#include_shell "/usr/share/lighttpd/use-ipv6.pl " + server.port
+include_shell "/usr/share/lighttpd/create-mime.assign.pl"
+include_shell "/usr/share/lighttpd/include-conf-enabled.pl"
+
+$HTTP["url"] =~ "^/cgi-bin/" {
+    cgi.assign = (".py" => "/usr/bin/python")
+}
+
+$SERVER["socket"] == ":55864" {
+  ssl.engine = "enable" 
+  ssl.pemfile = "/etc/lighttpd/certs/lighttpd.pem" 
+}
+
+ssl.honor-cipher-order = "enable"
+ssl.cipher-list = "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH"
+ssl.use-compression = "disable"
+setenv.add-response-header = (
+    "Strict-Transport-Security" => "max-age=63072000; includeSubdomains; preload",
+    "X-Frame-Options" => "DENY",
+    "X-Content-Type-Options" => "nosniff"
+)
+ssl.use-sslv2 = "disable"
+ssl.use-sslv3 = "disable"
+```
+
+
 ## Licenses
 
 Included software:
@@ -173,3 +229,4 @@ Included software:
     * [MIDI.js](https://github.com/mudcube/MIDI.js) -- [MIT license](https://github.com/mudcube/MIDI.js/blob/master/LICENSE.txt)
 * [Skeleton](https://github.com/dhg/Skeleton) CSS -- [MIT license](https://github.com/dhg/Skeleton/blob/master/LICENSE.md)
 * [CSS Notification Boxes](http://www.cssportal.com/blog/css-notification-boxes/) -- Unknown license. Consult author/[website](http://www.cssportal.com/blog/css-notification-boxes/).
+
