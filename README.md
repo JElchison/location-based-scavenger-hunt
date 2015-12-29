@@ -133,7 +133,7 @@ Ensure that everyone reads the instructions (on Question 1) before anyone attemp
 
 Questions are served, one at a time, in order, beginning with question #1 (which also provides some basic instructions).  All users playing the game always see the same question.  When one user answers a question correctly, all users see the next question.  Automatic refreshes are intentionally omitted to keep from frustrating users while mid-input.  There is a refresh link that can/should be used frequently to see the latest game updates.  All users will be able to see the current scoreboard.
 
-Some questions require a correct text answer.  Others require a user to be in the "right" location".  Other questions have both constraints.
+Some questions require a correct text answer.  Others require a user to be in the "right" location.  Other questions have both constraints.
 
 When the last question is correctly answered, the game is over ... maybe.
 
@@ -155,11 +155,13 @@ Each game can have any number of administrators, who do not participate but ensu
 * Disable (future) questions (to expedite a long game) (checkboxes in the `Dis` column)
 * Reset the game (see below section)
 
+An admin could use a browser on a phone, tablet, or even computer.  No need for location services.
+
 
 ## Resetting a Game
 
 To start a brand new game, or in case of catastrophic failure, admins have the ability to delete all persistent game state.  This can be done via the admin panel, or by accessing the following URL directly:
-    * `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where the hash comes from an admin in the `USERS` list in `game_config.py`.
+* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where the hash comes from an admin in the `USERS` list in `game_config.py`.
 
 Non-admins cannot reset games.
 
