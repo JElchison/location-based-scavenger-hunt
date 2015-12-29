@@ -150,10 +150,10 @@ For a human to win, someone must play the martyr and donate points to the Grinch
 ## Admin Interface
 
 Each game can have any number of administrators, who do not participate but ensure that the game continues without any problems and on schedule.  From the [admin panel](https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Admin.png), an admin has the ability to:
-* Manually edit current scores
-* Set the current question
-* Disable (future) questions (to expedite a long game)
-* Reset the game (see below)
+* Manually edit current scores (form at the top)
+* Set the current question (radio buttons in the `Cur` column)
+* Disable (future) questions (to expedite a long game) (checkboxes in the `Dis` column)
+* Reset the game (see below section)
 
 
 ## Resetting a Game
