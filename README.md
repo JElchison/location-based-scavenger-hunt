@@ -84,6 +84,7 @@ Following is one recommended configuration:
     * Disable HTTP on port 80
     * Run latest version of TLS on obscure high port number (e.g. 55864)
     * [Strong Ciphers for Apache, nginx and Lighttpd](https://cipherli.st/)
+    * Enable Python in CGI
 * [lighttpd](https://www.lighttpd.net/)
     * `sudo apt-get install lighttpd`
     * [Setting up a simple SSL configuration](https://redmine.lighttpd.net/projects/1/wiki/HowToSimpleSSL)
