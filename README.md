@@ -56,7 +56,7 @@ Embedded HTML, in this case a YouTube video:
 </p>
 
 <p>
-A question including an [interactive HTML5 Simon game](http://labs.uxmonk.com/simon-says/):
+A question including an <a href="http://labs.uxmonk.com/simon-says/">interactive HTML5 Simon game</a>:
 <br><img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Simon.png" width="300">
 </p>
 
