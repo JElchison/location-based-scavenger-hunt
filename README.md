@@ -89,6 +89,8 @@ Following is one recommended configuration:
     * [Setting up a simple SSL configuration](https://redmine.lighttpd.net/projects/1/wiki/HowToSimpleSSL)
     * [Strong SSL Security on lighttpd](https://raymii.org/s/tutorials/Strong_SSL_Security_On_lighttpd.html)
     * [Installing Lighttpd with Python CGI support](https://mike632t.wordpress.com/2013/09/21/installing-lighttpd-with-python-cgi-support/)
+
+Regardless of your web server, you'll need a few Python goodies available on the server:
 * [pip](http://www.pip-installer.org/) for Python package management
     * `sudo apt-get install python-pip`
 * [dill](https://github.com/uqfoundation/dill) as alternative for Python's pickle
