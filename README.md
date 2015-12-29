@@ -56,6 +56,11 @@ Embedded HTML, in this case a YouTube video:
 </p>
 
 <p>
+A question including an interactive HTML5 Simon game:
+<br><img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Simon.png" width="300">
+</p>
+
+<p>
 Admin panel:
 <br><img src="https://raw.githubusercontent.com/JElchison/location-based-scavenger-hunt/master/screenshots/Admin.png" width="300">
 </p>
@@ -161,7 +166,7 @@ An admin could use a browser on a phone, tablet, or even computer.  No need for 
 ## Resetting a Game
 
 To start a brand new game, or in case of catastrophic failure, admins have the ability to delete all persistent game state.  This can be done via the admin panel, or by accessing the following URL directly:
-* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where `hash` comes from an admin in the `USERS` list in `game_config.py`.
+* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where `hash` comes from an admin in the `USERS` list in `game_config.py`
 
 Non-admins cannot reset games.
 
