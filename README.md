@@ -100,13 +100,13 @@ Following should be set up per-game:
     * `ADMIN_USERS` list
     * Name of game arch-nemesis (e.g. "The Grinch")
     * UTC time that game is expected to end
-    * Define questions.  Refer to the [question class](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game.py#L103) for more info. Sample questions included are for a Christmas-based hunt in Cincinnati, but can easily be repurposed for your own uses (for any occasion, in any city).
+    * Define questions.  Refer to the [Question class](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game.py#L103) for more info. Sample questions included are for a Christmas-based hunt in Cincinnati, but can easily be repurposed for your own uses (for any occasion, in any city).
 * If using the (included) Simon question, be sure to update required end score and URL on [line 114 of `simon_says.js`](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/simon/inc/simon_says.js#L114).  The `q=14` *must* match the question number in `game_config.py`.
 * Set up a login method.  Login URL = `https://your-server-url.here:55864/cgi-bin/game.py?l=hash` where the hash comes from the `USERS` list in `game_config.py`. Methods:
     * Email a personalized login link to every user (no sharing login links).  This is the preferred method (see Client Setup below).
     * Print a QR code for each user using the personalized login link
-    
-for ideas on devising creative questions:
+
+For ideas on devising creative questions:
     * Use the included Simon game
     * Hide a clue inside a real [geocache](https://www.geocaching.com/), and then link to the geocache as part of a question
     * Use [Google Voice](https://www.google.com/voice) for a custom voicemail greeting revealing a required clue
