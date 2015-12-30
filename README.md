@@ -236,7 +236,7 @@ ssl.use-sslv3 = "disable"
 
 ## Licenses
 
-Software I wrote is governed by the GNU v2 license.
+Software I wrote is governed by the [GNU v2 license](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/LICENSE).
 
 For included software (not written by me):
 * [HTML5-Simon-Says](https://github.com/dbchristopher/HTML5-Simon-Says) -- [GNU v3 license](https://github.com/dbchristopher/HTML5-Simon-Says/blob/master/LICENSE.txt)
