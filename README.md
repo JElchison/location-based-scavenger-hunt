@@ -180,7 +180,7 @@ Non-admins cannot reset games.
 After a game reset, all players (including admins) must close all tabs and re-login.
 
 
-## Sample lighttpd config
+## Sample lighttpd Config
 
 ```
 server.modules = (
