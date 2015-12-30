@@ -89,7 +89,7 @@ Following is one recommended configuration:
     * Run latest version of TLS on obscure high port number (e.g. 55864)
     * [Strong Ciphers for Apache, nginx and Lighttpd](https://cipherli.st/)
     * Enable Python in CGI
-* [lighttpd](https://www.lighttpd.net/) (see [Sample lighttpd config](## Sample lighttpd config) below)
+* [lighttpd](https://www.lighttpd.net/) (see [Sample lighttpd config](#sample-lighttpd-config) below)
     * `sudo apt-get install lighttpd`
     * [Setting up a simple SSL configuration](https://redmine.lighttpd.net/projects/1/wiki/HowToSimpleSSL)
     * [Strong SSL Security on lighttpd](https://raymii.org/s/tutorials/Strong_SSL_Security_On_lighttpd.html)
@@ -115,7 +115,7 @@ Following should be set up per-game:
     * Define questions.  Refer to the [Question class](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game.py#L103) for more info. Sample questions included are for a Christmas-based hunt in Cincinnati, but can easily be repurposed for your own uses (for any occasion, in any city).
 * If using the (included) Simon question, be sure to update required end score and URL on [line 114 of `simon_says.js`](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/simon/inc/simon_says.js#L114).  The `q=14` *must* match the question number in `[game_config.py](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game_config.py)`.
 * Set up a login method.  Login URL = `https://your-server-url.here:55864/cgi-bin/game.py?l=hash` where `hash` comes from the `USERS` list in `[game_config.py](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game_config.py)`. Methods:
-    * Email a personalized login link to every user (no sharing login links).  This is the preferred method (see [Client Setup](### Client Setup) below).
+    * Email a personalized login link to every user (no sharing login links).  This is the preferred method (see [Client Setup](#client-setup) below).
     * Print a QR code for each user using the personalized login link
 
 For ideas on devising creative questions:
@@ -165,7 +165,7 @@ Each game can have any number of administrators, who do not participate but ensu
 * Manually edit current scores (form at the top)
 * Set the current question (radio buttons in the `Cur` column)
 * Disable (future) questions (to expedite a long game) (checkboxes in the `Dis` column)
-* Reset the game (see [Resetting a Game](## Resetting a Game) below)
+* Reset the game (see [Resetting a Game](#resetting-a-game) below)
 
 An admin could use a browser on a phone, tablet, or even computer.  No need for location services.
 
