@@ -7,15 +7,19 @@ Sample questions included are for a Christmas-based hunt in Cincinnati, but can 
 
 Features:
 * Multi-user, collaborative game.  Everyone competes collaboratively, but against each other for the final prize.
+    * Number of users limited only by resources on game server (i.e. virtually unlimited)
+    * Teams may also compete against each other (one login per team)
 * Define your own questions (in order)
 * Answers may be text-based, location-based, or both
-* Admin panel to modify score, current question, disabled questions
+* Each question may have an arbitrary number of hints (opening a new hint will cost a user some points)
 * Several Easter eggs / plot-twists
 * "Gullible challenges" between users (one user must convince another of an obviously incorrect answer)
+* Admin panel to modify score, current question, disabled questions
 
 Techy stuff:
 * On client side, browser-based gameplay.  Works on any mobile device with a modern browser (Chrome recommended).  No app installation required.
 * Server side runs a Python script in CGI environment (TLS recommended)
+* Session management.  Each client may login from any IP (as is required as mobile phones hop around the city throughout the challenge).  Cookie-based sessions ensure that a specific user is logged in from at most 1 browser.
 
 
 ## Screenshots
@@ -85,7 +89,7 @@ Following is one recommended configuration:
     * Run latest version of TLS on obscure high port number (e.g. 55864)
     * [Strong Ciphers for Apache, nginx and Lighttpd](https://cipherli.st/)
     * Enable Python in CGI
-* [lighttpd](https://www.lighttpd.net/) (see example config below)
+* [lighttpd](https://www.lighttpd.net/) (see [Sample lighttpd config](## Sample lighttpd config) below)
     * `sudo apt-get install lighttpd`
     * [Setting up a simple SSL configuration](https://redmine.lighttpd.net/projects/1/wiki/HowToSimpleSSL)
     * [Strong SSL Security on lighttpd](https://raymii.org/s/tutorials/Strong_SSL_Security_On_lighttpd.html)
@@ -103,15 +107,15 @@ Regardless of your web server, you'll need a few Python goodies available on the
 ### Game Setup
 
 Following should be set up per-game:
-* Fill out `game_config.py` with your game parameters
+* Fill out `[game_config.py](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game_config.py)` with your game parameters
     * `USERS` table (in a list of "(username, login hash)" tuples)
     * `ADMIN_USERS` list
     * Name of game arch-nemesis (e.g. "The Grinch")
     * UTC time that game is expected to end
     * Define questions.  Refer to the [Question class](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game.py#L103) for more info. Sample questions included are for a Christmas-based hunt in Cincinnati, but can easily be repurposed for your own uses (for any occasion, in any city).
-* If using the (included) Simon question, be sure to update required end score and URL on [line 114 of `simon_says.js`](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/simon/inc/simon_says.js#L114).  The `q=14` *must* match the question number in `game_config.py`.
-* Set up a login method.  Login URL = `https://your-server-url.here:55864/cgi-bin/game.py?l=hash` where `hash` comes from the `USERS` list in `game_config.py`. Methods:
-    * Email a personalized login link to every user (no sharing login links).  This is the preferred method (see Client Setup below).
+* If using the (included) Simon question, be sure to update required end score and URL on [line 114 of `simon_says.js`](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/simon/inc/simon_says.js#L114).  The `q=14` *must* match the question number in `[game_config.py](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game_config.py)`.
+* Set up a login method.  Login URL = `https://your-server-url.here:55864/cgi-bin/game.py?l=hash` where `hash` comes from the `USERS` list in `[game_config.py](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game_config.py)`. Methods:
+    * Email a personalized login link to every user (no sharing login links).  This is the preferred method (see [Client Setup](### Client Setup) below).
     * Print a QR code for each user using the personalized login link
 
 For ideas on devising creative questions:
@@ -161,7 +165,7 @@ Each game can have any number of administrators, who do not participate but ensu
 * Manually edit current scores (form at the top)
 * Set the current question (radio buttons in the `Cur` column)
 * Disable (future) questions (to expedite a long game) (checkboxes in the `Dis` column)
-* Reset the game (see below section)
+* Reset the game (see [Resetting a Game](## Resetting a Game) below)
 
 An admin could use a browser on a phone, tablet, or even computer.  No need for location services.
 
@@ -169,7 +173,7 @@ An admin could use a browser on a phone, tablet, or even computer.  No need for 
 ## Resetting a Game
 
 To start a brand new game, or in case of catastrophic failure, admins have the ability to delete all persistent game state.  This can be done via the admin panel, or by accessing the following URL directly:
-* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where `hash` comes from an admin in the `USERS` list in `game_config.py`
+* `https://your-server-url.here:55864/cgi-bin/reset.py?l=hash` where `hash` comes from an admin in the `USERS` list in `[game_config.py](https://github.com/JElchison/location-based-scavenger-hunt/blob/master/cgi-bin/game_config.py)`
 
 Non-admins cannot reset games.
 
@@ -234,9 +238,13 @@ ssl.use-sslv3 = "disable"
 
 ## Licenses
 
-Included software:
+Software I wrote is governed by the GNU v2 license.
+
+For included software (not written by me):
 * [HTML5-Simon-Says](https://github.com/dbchristopher/HTML5-Simon-Says) -- [GNU v3 license](https://github.com/dbchristopher/HTML5-Simon-Says/blob/master/LICENSE.txt)
+    * Modified success criteria to redirect back to gameplay once minimum score has been attained
     * [MIDI.js](https://github.com/mudcube/MIDI.js) -- [MIT license](https://github.com/mudcube/MIDI.js/blob/master/LICENSE.txt)
 * [Skeleton](https://github.com/dhg/Skeleton) CSS -- [MIT license](https://github.com/dhg/Skeleton/blob/master/LICENSE.md)
+    * Modified various elements for more efficient vertical spacing
 * [CSS Notification Boxes](http://www.cssportal.com/blog/css-notification-boxes/) -- Unknown license. Consult author/[website](http://www.cssportal.com/blog/css-notification-boxes/).
 
