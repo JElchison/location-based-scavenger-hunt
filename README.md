@@ -188,7 +188,6 @@ server.modules = (
         "mod_alias",
         "mod_compress",
         "mod_redirect",
-#       "mod_rewrite",
         "mod_cgi",
 )
 
@@ -200,10 +199,9 @@ server.username             = "www-data"
 server.groupname            = "www-data"
 server.port                 = 80
 
-
-index-file.names            = ( "index.php", "index.html", "index.lighttpd.html" )
+index-file.names            = ( "index.html", "index.lighttpd.html" )
 url.access-deny             = ( "~", ".inc" )
-static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
+static-file.exclude-extensions = ( ".py", ".php", ".pl", ".fcgi" )
 
 compress.cache-dir          = "/var/cache/lighttpd/compress/"
 compress.filetype           = ( "application/javascript", "text/css", "text/html", "text/plain" )
