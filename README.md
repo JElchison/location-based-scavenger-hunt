@@ -128,7 +128,7 @@ For ideas on devising creative questions:
 
 ### Client Setup
 
-If you're using QR codes for login, iPhone users may need to download a barcode reader, such as [QR Reader](https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609).  Further, you may not be able to control what browser opens after having scanned a QR code.  Safari on iPhone has been observed to be wonky.
+If you're using QR codes for login, users may need to download a barcode reader, such as [QR Reader](https://itunes.apple.com/us/app/qr-reader-for-iphone/id368494609) for iPhone or [Barcode Scanner](https://play.google.com/store/apps/details?id=com.google.zxing.client.android) for Android.  Further, you may not be able to control what browser opens after having scanned a QR code, which may be problematic (e.g. Safari on iPhone has been observed to be wonky).
 
 Chrome is the recommended mobile browser, both on iPhone and Android.  For that reason, perhaps emailing a personalized login link to every user is the preferred method.
 
