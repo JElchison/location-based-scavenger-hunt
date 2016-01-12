@@ -1,5 +1,5 @@
 # Location-Based Scavenger Hunt
-A Python/CGI framework for creating your own customizable location-based collaborative scavenger hunts.
+A Python/CGI framework for creating your own customizable location-based collaborative scavenger hunts.  Works on any mobile device with a modern browser, such as iPhone and Android.  No app installation required.
 
 For Christmas 2015, I decided I'd like to gift my family an *experience* instead of material gifts.  There are a few services out there that provide location-based scavenger hunts, but none (that I could find) are free or open-source.  So, I created my own.  And now, this is my gift to you.
 
