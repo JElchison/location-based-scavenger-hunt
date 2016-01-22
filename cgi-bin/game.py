@@ -152,7 +152,7 @@ def write_state(state):
         # dump state
         dill.dump(state, dill_file)
     except IOError:
-        # this can happen when to users submit a form at the same time.  instead of trying to merge states, just tell all subsequent users to try again.  pretty unlikely this will happen in games with small numbers of users.
+        # this can happen when multiple users submit a form at the same time.  instead of trying to merge states, just tell all subsequent users to try again.  pretty unlikely this will happen in games with small numbers of users.
         print '''<div class="alert-box warning"><span>Oh no! </span>Server was busy with another request. Please try again. :-/</div>'''
     finally:
         if dill_file:
