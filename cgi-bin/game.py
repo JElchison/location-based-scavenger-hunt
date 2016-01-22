@@ -542,7 +542,7 @@ def handle_answer(state, form, user, questions):
 
         if answer_texts:
             print '<div class="alert-box success"><span>Correct! </span>+' + str(POINTS_ADDED_FOR_CORRECT_ANSWER) + ' points for you.<br>Tell your teammates to click the "Refresh" link for the next question (not the browser button).</div>'
-            state.last_message = user + ' answered question ' + str(state.current_question_number + 1) + ' correctly with the answer <b>' + form.getfirst("a").strip() + '</b>. The next question is listed below.'
+            state.last_message = user + ' answered question ' + str(state.current_question_number + 1) + ' correctly with the answer <b>' + cgi.escape(form.getfirst("a").strip()) + '</b>. The next question is listed below.'
         else:
             print '<div class="alert-box success"><span>You found it! </span>+' + str(POINTS_ADDED_FOR_CORRECT_ANSWER) + ' points for you.<br>Tell your teammates to click the "Refresh" link for the next question (not the browser button).</div>'
             state.last_message = user + ' found the location for question ' + str(state.current_question_number + 1) + '. The next question is listed below.'
