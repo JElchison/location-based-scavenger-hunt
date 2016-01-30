@@ -147,16 +147,7 @@ Questions are served, one at a time, in order, beginning with question #1 (which
 
 Some questions require a correct text answer.  Others require a user to be in the "right" location.  Other questions have both constraints.
 
-When the last question is correctly answered, the game is over ... maybe.
-
-
-### Spoiler
-
-Below contains an actual game spoiler.
-
-The game is rigged to always have the Grinch win.  He will gain points steadily with passing time (that's why the game needs to know the estimated UTC time when the game will be over).  Also, he gains points with all incorrect answers.  Even if a single user answers all questions correctly, he/she will still have less points than the Grinch at the estimated game-end time.
-
-For a human to win, someone must play the martyr and donate points to the Grinch.  Doing so will actually remove points from the Grinch, causing the next human in line to win.
+When the last question is correctly answered, the game is over ... maybe.  For more details, see the [Spoiler](https://github.com/JElchison/location-based-scavenger-hunt/wiki/Spoiler) wiki page.
 
 
 ## Admin Interface
